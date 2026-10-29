@@ -261,7 +261,7 @@ dialog[open]{animation:up .35s cubic-bezier(.2,.9,.3,1.15)}
       nowEl.innerHTML = `<h2>Week ${cur+1} van ${WEEKS.length}</h2>
         <button class="big-badge ${seen[cur] ? '' : 'new'}" type="button" data-i="${cur}" aria-label="Open de motivatie van week ${cur+1}">
           <span class="em">${seen[cur] ? w.e : '🎁'}</span><span class="lbl">${seen[cur] ? 'Nog eens bekijken' : 'Tik voor motivatie'}</span></button>
-        <p>${w.t === 'video' ? 'Deze week: een filmpje' : 'Deze week: een motivatiebeeld'}. Volgende badge op ${fmt(unlockDate(cur+1) < RACE ? unlockDate(cur+1) : RACE)}.</p>`;
+        <p>Volgende badge op ${fmt(unlockDate(cur+1) < RACE ? unlockDate(cur+1) : RACE)}</p>`;
     }
     $('#grid').innerHTML = WEEKS.map((w,i) => {
       const locked = i > cur;
